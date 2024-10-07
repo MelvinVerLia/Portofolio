@@ -8,25 +8,28 @@
     background-color: rgb(30, 30, 30);
 }
 
-#experience, #education, #project{
+#experience,
+#education,
+#project, #hero {
     scroll-margin-top: 60px;
 }
 
-section{
+section {
     min-height: 100vh;
 }
 
-body{
+body {
     margin-top: 60px;
     height: auto;
 }
 
-@keyframes appear{
-    from{
+@keyframes appear {
+    from {
         opacity: 0;
         scale: 0;
     }
-    to{
+
+    to {
         opacity: 1;
         scale: 1;
     }
@@ -41,11 +44,11 @@ body{
     align-items: center;
     height: 60px;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     box-sizing: border-box;
 }
 
-.navbar-content{
+.navbar-content {
     max-width: 1400px;
     margin: auto;
     width: 100%;
@@ -59,13 +62,13 @@ body{
     color: black;
 }
 
-.navbar2 ul{
+.navbar2 ul {
     display: flex;
     gap: 40px;
     list-style-type: none;
 }
 
-.navbar2 a{
+.navbar2 a {
     text-decoration: none;
     font-size: 20px;
     border-bottom: 2px solid transparent;
@@ -76,8 +79,18 @@ body{
     border-bottom: 2px solid;
 }
 
-a.active{
-    border-bottom: 2px solid;
+.hamburger {
+    display: none;
+    transition: 0.5s;
+}
+
+.burger-menu{
+    display: none;
+}
+
+.hamburger i:hover {
+    scale: 1.05;
+    cursor: pointer;
 }
 
 /* hero section */
@@ -86,7 +99,7 @@ a.active{
     max-width: 1400px;
     height: 100vh;
     margin: 0 auto;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
 }
 
@@ -106,13 +119,14 @@ a.active{
     font-size: 30px;
 }
 
-.blink{
+.blink {
     overflow: hidden;
     max-width: fit-content;
     border-right: 3px solid black;
     white-space: nowrap;
     animation: typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite;
 }
+
 .hero-left p {
     font-size: 20px;
     margin-top: 5px;
@@ -129,6 +143,7 @@ a.active{
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent;
@@ -138,7 +153,7 @@ a.active{
         border-color: black;
     }
 
-    100%{
+    100% {
         border: none;
     }
 }
@@ -171,7 +186,7 @@ a.active{
     align-items: center;
 }
 
-.hero-right img{
+.hero-right img {
     width: 500px;
     height: 500px;
     object-fit: cover;
@@ -196,7 +211,7 @@ a.active{
     text-align: center;
 }
 
-.project-section h1{
+.project-section h1 {
     font-size: 50px;
 }
 
@@ -218,13 +233,22 @@ a.active{
     object-position: left top;
 }
 
-.project{
+.project {
     position: relative;
     display: flex;
-    transition: transform 0.5s;
+    cursor: pointer;
 }
 
-.project-inner{
+.project img{
+    transition: 0.3s ease-in-out;
+}
+
+.project img:hover{
+    scale: 1.02;
+    box-shadow: 0 0 20px 10px rgba(25, 0, 255, 0.945);
+}
+
+.project-inner {
     position: absolute;
     width: 500px;
     height: 500px;
@@ -239,7 +263,6 @@ a.active{
     scale: 0;
     transition: 0.4s;
     overflow: hidden;
-    
 }
 
 .project-inner h1 {
@@ -250,14 +273,14 @@ a.active{
     background-color: #272525;
 }
 
-.project-inner p{
+.project-inner p {
     text-align: left;
     font-size: 20px;
     margin: 5px;
     background-color: #272525;
 }
 
-.project-button{
+.project-button {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -266,7 +289,7 @@ a.active{
     height: 100%;
 }
 
-.project-button a{
+.project-button a {
     margin-top: auto;
     text-decoration: none;
     display: flex;
@@ -276,38 +299,36 @@ a.active{
     width: 200px;
     border-radius: 25px;
     height: 50px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
-.project-button a:hover{
+.project-button a:hover {
     background-color: #272525;
     box-shadow: 0 0 10px 5px rgba(25, 0, 255, 0.945);
     scale: 0.95;
 }
 
-.project:hover .project-inner{
+.project.active .project-inner {
     z-index: 2;
     border-radius: 10%;
     scale: 1.05;
     box-shadow: 0 0 20px 10px rgba(25, 0, 255, 0.945);
 }
 
-.project-outer{
-    z-index: 1;
-}
-
-#notAvailable{
+#notAvailable {
     cursor: pointer;
 }
 
 /* education section and experience*/
-.education-container h2, .experience-container h2{
+.education-container h2,
+.experience-container h2 {
     text-align: center;
     margin: 30px;
     font-size: 60px;
 }
 
-.education-container, .experience-container{
+.education-container,
+.experience-container {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry cover 40%;
@@ -317,20 +338,22 @@ a.active{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+
 }
 
-.education-content h3, .experience-content h3{
+.education-content h3,
+.experience-content h3 {
     font-size: 40px;
     background-color: #292929;
 }
 
-.education-content h4, .experience-content h4{
+.education-content h4,
+.experience-content h4 {
     font-size: 30px;
     background-color: #292929;
 }
 
-.experience-content{
+.experience-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -339,14 +362,16 @@ a.active{
     background-color: #292929;
 }
 
-.education-content{
+.education-content {
     display: flex;
     background-color: #292929;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
-.education-item, .experience-item{
+
+.education-item,
+.experience-item {
     padding: 25px;
     border-radius: 30px;
     background-color: #292929;
@@ -355,24 +380,26 @@ a.active{
     transition: 0.4s ease;
 }
 
-.education-item:hover, .experience-item:hover{
+.education-item:hover,
+.experience-item:hover {
     box-shadow: 0 0 25px 8px rgba(25, 0, 255, 0.945);
 }
 
-.education-item-container{
+.education-item-container {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.experience-item-container{
+.experience-item-container {
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: right;
 }
 
-.education-dot, .experience-dot{
+.education-dot,
+.experience-dot {
     height: 30px;
     width: 30px;
     background-color: rgba(38, 20, 192, 0.945);
@@ -382,25 +409,27 @@ a.active{
 
 @keyframes pulse {
     0% {
-      transform: scale(1);
-      box-shadow: 0 0 10px 5px rgba(44, 32, 146, 0.945);
+        transform: scale(1);
+        box-shadow: 0 0 10px 5px rgba(44, 32, 146, 0.945);
     }
+
     50% {
-      transform: scale(1.1); 
-      box-shadow: 0 0 10px 5px rgba(26, 12, 155, 0.945);
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 5px rgba(26, 12, 155, 0.945);
     }
+
     100% {
-      transform: scale(1);
-      box-shadow: 0 0 10px 5px rgba(32, 18, 161, 0.945);
+        transform: scale(1);
+        box-shadow: 0 0 10px 5px rgba(32, 18, 161, 0.945);
     }
-  }
+}
 
 /*  footer */
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     gap: 50%;
-    width: 100%; 
+    width: 100%;
     height: 200px;
     background-color: rgb(35, 35, 35);
     justify-content: center;
@@ -408,18 +437,18 @@ a.active{
     overflow: hidden;
 }
 
-.foot-content1{ 
+.foot-content1 {
     justify-content: center;
     display: flex;
     gap: 40px;
     background-color: rgb(35, 35, 35);
 }
 
-.foot-content1 a{ 
+.foot-content1 a {
     background-color: rgb(35, 35, 35);
 }
 
-.foot-content1 img{
+.foot-content1 img {
     margin-top: 30px;
     width: 50px;
     height: 50px;
@@ -433,14 +462,113 @@ a.active{
     transition: 0.5s ease;
 }
 
-.foot-content1 img:hover{
+.foot-content1 img:hover {
     scale: 1.2;
 }
 
-.foot-content2{
+.foot-content2 {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     padding: 10px;
 }
 
+@media (max-width: 768px) {
+
+    .hamburger {
+        margin-left: 10px;
+        display: block;
+    }
+    
+    .burger-menu ul{
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        list-style-type: none;
+    }
+    
+    .burger-menu li{
+        padding: 10px;
+        margin-left: 10px;
+    }
+    
+    .burger-menu a:hover{
+        color: rgba(25, 0, 255, 0.945);
+    }
+    
+    .burger-menu a{
+        font-weight: bolder;
+        font-size: 24px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .burger-menu{
+        height: 100vh;
+        width: 40vw;
+        left: -40vw;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        z-index: 6;
+        transition: 0.5s ease;
+        margin-top: 60px;
+        overflow: hidden;
+        display: block;
+    }
+    
+    .burger-menu.active{
+        left: 0;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    *{
+        margin: 0 3px;
+    }
+
+    .project-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .project img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .project-inner {
+        width: 400px;
+        height: 400px;
+    }
+
+    .project-inner h1 {
+        font-size: 30px;
+        padding: 10px;
+        margin: 0;
+        background-color: #272525;
+        font-weight: bolder;
+        z-index: 100;
+    }
+    
+    .project-inner p {
+        text-align: left;
+        font-size: 18px;
+        background-color: #272525;
+    }
+
+    .foot-content1 {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+}
