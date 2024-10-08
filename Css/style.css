@@ -8,6 +8,10 @@
     background-color: rgb(30, 30, 30);
 }
 
+html{
+    margin: 0;
+}
+
 #experience,
 #education,
 #project, #hero {
@@ -19,7 +23,7 @@ section {
 }
 
 body {
-    margin-top: 60px;
+    margin: 0;
     height: auto;
 }
 
@@ -98,6 +102,7 @@ body {
 .hero-section {
     max-width: 1400px;
     height: 100vh;
+    margin-top: 60px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -189,6 +194,7 @@ body {
 .hero-right img {
     width: 500px;
     height: 500px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     object-position: left;
@@ -228,6 +234,8 @@ body {
     display: block;
     width: 500px;
     height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     object-fit: cover;
     border-radius: 10%;
     object-position: left top;
@@ -402,6 +410,7 @@ body {
 .experience-dot {
     height: 30px;
     width: 30px;
+    aspect-ratio: 1/1;
     background-color: rgba(38, 20, 192, 0.945);
     border-radius: 50%;
     animation: pulse 1s infinite;
@@ -435,6 +444,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: 0;
 }
 
 .foot-content1 {
@@ -475,6 +485,12 @@ body {
 
 @media (max-width: 768px) {
 
+    .hero-right img {
+        width: 400px;
+        height: 400px;
+        aspect-ratio: 1/1;
+    }
+
     .hamburger {
         margin-left: 10px;
         display: block;
@@ -513,6 +529,7 @@ body {
         top: 0;
         z-index: 6;
         transition: 0.5s ease;
+        margin: 0;
         margin-top: 60px;
         overflow: hidden;
         display: block;
@@ -528,11 +545,7 @@ body {
 
     .hero-section {
         flex-direction: column-reverse;
-        height: auto;
-    }
-
-    *{
-        margin: 0 3px;
+        margin-top: 60px;
     }
 
     .project-container {
@@ -542,18 +555,41 @@ body {
     }
 
     .project img{
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
     }
 
     .project-inner {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
     }
 
+    .project-button {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        background-color: #272525;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .project-button a {
+        margin-top: auto;
+        text-decoration: none;
+        display: flex;
+        font-size: 10px;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        border-radius: 25px;
+        height: 30px;
+        transition: 0.3s ease-in-out;
+    }
+    
     .project-inner h1 {
-        font-size: 30px;
-        padding: 10px;
+        font-size: 20px;
+        padding: 5px;
         margin: 0;
         background-color: #272525;
         font-weight: bolder;
@@ -562,7 +598,7 @@ body {
     
     .project-inner p {
         text-align: left;
-        font-size: 18px;
+        font-size: 14px;
         background-color: #272525;
     }
 
