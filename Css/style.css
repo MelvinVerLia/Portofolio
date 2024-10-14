@@ -12,14 +12,14 @@ html{
     margin: 0;
 }
 
-#experience,
-#education,
-#project, #hero {
-    scroll-margin-top: 60px;
-}
-
 section {
     min-height: 100vh;
+    margin-left: 200px;
+    margin-right: 200px;
+    scroll-margin-top: 70px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
 }
 
 body {
@@ -53,8 +53,8 @@ body {
 }
 
 .navbar-content {
-    max-width: 1400px;
-    margin: auto;
+    margin-left: 200px;
+    margin-right: 200px;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -100,10 +100,8 @@ body {
 /* hero section */
 
 .hero-section {
-    max-width: 1400px;
     height: 100vh;
     margin-top: 60px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -129,9 +127,13 @@ body {
     max-width: fit-content;
     border-right: 3px solid black;
     white-space: nowrap;
-    animation: typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite;
+    animation: typing 3s steps(50, end), blink-caret 0.75s step-end infinite;
 }
 
+.blink.finished{
+    border: none;
+    animation: none;
+}
 .hero-left p {
     font-size: 20px;
     margin-top: 5px;
@@ -156,10 +158,6 @@ body {
 
     50% {
         border-color: black;
-    }
-
-    100% {
-        border: none;
     }
 }
 
@@ -191,9 +189,15 @@ body {
     align-items: center;
 }
 
-.hero-right img {
+.hero-img {
     width: 500px;
     height: 500px;
+    border-radius: 50%;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
@@ -208,10 +212,6 @@ body {
 
 /* project */
 .project-section {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry cover 40%;
-    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -230,15 +230,18 @@ body {
     position: relative;
 }
 
-.project-container img {
-    display: block;
-    width: 500px;
-    height: 500px;
+.project-img{
     max-width: 500px;
     max-height: 500px;
-    object-fit: cover;
     border-radius: 10%;
-    object-position: left top;
+}
+
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+
 }
 
 .project {
@@ -264,20 +267,19 @@ body {
     z-index: -1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     padding: 40px;
     box-sizing: border-box;
     border-radius: 30px;
     scale: 0;
     transition: 0.4s;
     overflow: hidden;
+
 }
 
 .project-inner h1 {
-    padding: 20px;
     font-size: 50px;
     font-weight: bolder;
-    margin: 5px;
     background-color: #272525;
 }
 
@@ -327,6 +329,22 @@ body {
     cursor: pointer;
 }
 
+.logo{
+    background-color: #272525;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo i{
+    background-color: #272525;
+    font-size: 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.logo i:hover{
+    scale: 1.2;
+}
 /* education section and experience*/
 .education-container h2,
 .experience-container h2 {
@@ -340,7 +358,6 @@ body {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry cover 40%;
-    max-width: 1400px;
     max-height: 100%;
     margin: 0 auto;
     display: flex;
@@ -361,21 +378,12 @@ body {
     background-color: #292929;
 }
 
-.experience-content {
+.experience-content, .experience-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    text-align: end;
     background-color: #292929;
-}
-
-.education-content {
-    display: flex;
-    background-color: #292929;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
 }
 
 .education-item,
@@ -393,17 +401,10 @@ body {
     box-shadow: 0 0 25px 8px rgba(25, 0, 255, 0.945);
 }
 
-.education-item-container {
+.education-item-container, .experience-item-container {
     display: flex;
     gap: 20px;
     align-items: center;
-}
-
-.experience-item-container {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: right;
 }
 
 .education-dot,
@@ -433,64 +434,51 @@ body {
     }
 }
 
-/*  footer */
-.footer {
+/* Contact me */
+
+.contact-section h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-box{
     display: flex;
-    flex-direction: column;
-    gap: 50%;
-    width: 100%;
-    height: 200px;
-    background-color: rgb(35, 35, 35);
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+.contact-content1, .contact-content2{
+    border-radius: 20px;
+    margin: 30px;
+    background-color: #292929;
+    display: flex;
     align-items: center;
-    overflow: hidden;
-    margin: 0;
-}
-
-.foot-content1 {
-    justify-content: center;
-    display: flex;
     gap: 40px;
-    background-color: rgb(35, 35, 35);
-}
-
-.foot-content1 a {
-    background-color: rgb(35, 35, 35);
-}
-
-.foot-content1 img {
-    margin-top: 30px;
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-sizing: border-box;
-    transition: transform 0.3s;
+    width: 600px;
+    height: 200px;
     cursor: pointer;
-    border: 1px solid white;
-    background-color: white;
-    transition: 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
-.foot-content1 img:hover {
-    scale: 1.2;
+.contact-content1:hover, .contact-content2:hover{
+    scale: 1.05;
+    box-shadow: 0 0 25px 8px rgba(25, 0, 255, 0.945) ;
 }
 
-.foot-content2 {
+.contact-content1 h2, .contact-content2 h2{
+    font-size: 50px;
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    padding: 10px;
+    background-color: #292929;
+}
+.contact-content1 i, .contact-content2 i{
+    margin-left: 40px;
+    font-size: 60px;
+    background-color: #292929;
 }
 
-@media (max-width: 768px) {
-
-    .hero-right img {
-        width: 400px;
-        height: 400px;
-        aspect-ratio: 1/1;
-    }
-
+@media (max-width: 1300px)
+{
     .hamburger {
         margin-left: 10px;
         display: block;
@@ -543,9 +531,30 @@ body {
         display: none;
     }
 
+}
+
+@media (max-width: 800px) {
+
+    section{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 60px;
+    }
+
+    .navbar-content
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hero-img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+
     .hero-section {
         flex-direction: column-reverse;
-        margin-top: 60px;
+        justify-content: center;
     }
 
     .project-container {
@@ -554,7 +563,7 @@ body {
         padding: 20px;
     }
 
-    .project img{
+    .project-img{
         width: 300px;
         height: 300px;
     }
@@ -602,9 +611,10 @@ body {
         background-color: #272525;
     }
 
-    .foot-content1 {
-        flex-direction: row;
-        gap: 10px;
+    .logo{
+        gap: 5px;
     }
-
+    .logo i{
+        font-size: 15px;
+    }
 }
