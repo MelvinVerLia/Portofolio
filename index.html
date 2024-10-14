@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="Js/java.js" defer></script>
     <script src="https://kit.fontawesome.com/cdcf9a028a.js" crossorigin="anonymous"></script>
     <title>Portolomeus</title>
@@ -20,6 +21,7 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
     <header>
@@ -28,7 +30,7 @@
                 <div class="hamburger">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </div>
-                
+
                 <div class="navbar1">
                     <h1>Melvin Verdinan Mulia</h1>
                 </div>
@@ -38,6 +40,7 @@
                         <li><a href="#education">Education</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -49,21 +52,26 @@
             <div class="hero-left">
                 <h1>Hi, I'm Melvin</h1>
                 <h3 class="blink">Undergraduate Student</h3>
-                <p>I'm a Computer Science student at Binus University. 
-                    Throughout my studies, I've learned several programming languages and gained experience in both front-end and back-end web development. 
-                    I've also worked on various projects to continuously sharpen my skills and deepen my understanding of software development.</p>
+                <p>I'm a Computer Science student at Binus University.
+                    Throughout my studies, I've learned several programming languages and gained experience in both
+                    front-end and back-end web development.
+                    I've also worked on various projects to continuously sharpen my skills and deepen my understanding
+                    of software development.</p>
                 <div class="hero-logo">
-                    <a href="https://github.com/MelvinVerLia">
+                    <a href="https://github.com/MelvinVerLia" target="_blank">
                         <img src="Assets/github.png" alt="GitHub">
                     </a>
-                    <a href="https://www.linkedin.com/in/melvin-verdinan-mulia-075729323/">
+                    <a href="https://www.linkedin.com/in/melvin-verdinan-mulia-075729323/" target="_blank">
                         <img src="Assets/linkedin.png" alt="LinkedIn">
                     </a>
                 </div>
             </div>
             <div class="hero-right">
-                <img src="Assets/mi-face.jpg" alt="Melvin Verdinan Mulia">
+                <div class="hero-img">
+                    <img src="Assets/mi-face.jpg" alt="Melvin Verdinan Mulia">
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -99,23 +107,23 @@
         <div class="experience-container">
             <h2>Experience</h2>
             <div class="experience-item-container">
+                <div class="experience-dot"></div>
                 <div class="experience-item">
                     <div class="experience-content">
                         <h3>HIMTI | Activist</h3>
                         <h4>2023-2024 </h4>
                     </div>
                 </div>
-                <div class="experience-dot"></div>
             </div>
 
             <div class="experience-item-container">
+                <div class="experience-dot"></div>
                 <div class="experience-item">
                     <div class="experience-content">
                         <h3>Member | PBP Techno 2023</h3>
                         <h4>Jul 2023- Aug 2023</h4>
                     </div>
                 </div>
-                <div class="experience-dot"></div>
             </div>
 
         </div>
@@ -126,27 +134,48 @@
             <h1>My Projects</h1>
             <div class="project-container">
                 <div class="project">
-                    <img src="Assets/project1.png" alt="Project 1">
+                    <div class="project-img">
+                        <img src="Assets/project1.png" alt="Project 1">
+                    </div>
                     <div class="project-inner">
                         <h1>Hi-Toys</h1>
-                        <p>This project was my first experience creating a website from scratch. 
-                            I faced challenges in figuring out the layout due to the lack of a clear vision, but overcoming this obstacle helped me develop problem-solving skills. 
+                        <div class="logo">
+                            <i class="devicon-html5-plain-wordmark" style="color: rgb(255, 136, 25);"></i>
+                            <i class="fa-brands fa-css3-alt" style="color: rgb(19, 157, 236);"></i>
+                            <i class="fa-brands fa-js" style="color: rgb(241, 203, 29);"></i>
+                        </div>
+                        <p>This project was my first experience creating a website from scratch.
+                            I faced challenges in figuring out the layout due to the lack of a clear vision, but
+                            overcoming this obstacle helped me develop problem-solving skills.
                             Overall, this experience laid a strong foundation for my web development knowledge</p>
                         <div class="project-button">
-                            <a href="https://github.com/MelvinVerLia/Hi-Toyz">Source Code</a>
-                            <a href="https://melvinverlia.github.io/Hi-Toyz/">Demo</a>
+                            <a href="https://github.com/MelvinVerLia/Hi-Toyz" target="_blank">Source Code</a>
+                            <a href="https://melvinverlia.github.io/Hi-Toyz/" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project">
-                    <img src="Assets/project2.png" alt="Project 2">
+                    <div class="project-img">
+                        <img src="Assets/project2.png" alt="Project 2">
+                    </div>
                     <div class="project-inner">
                         <h1>MakeMeUpzz</h1>
-                        <p>This project marks my second experience in web development, where I had to create a makeup e-commerce platform using STACK. 
-                            Working on this project allowed me to develop foundational skills in both front-end and back-end development within a dynamic e-commerce setting</p>
+                        <div class="logo">
+                            <i class="devicon-html5-plain-wordmark" style="color: rgb(255, 136, 25);"></i>
+                            <i class="fa-brands fa-css3-alt" style="color: rgb(19, 157, 236);"></i>
+                            <i class="devicon-azuresqldatabase-plain" style="color: rgb(20, 138, 206);"></i>
+                            <i class="devicon-csharp-plain" style="color: rgb(140, 29, 231);"></i>
+                            
+                            <i class="devicon-dot-net-plain" style="color: rgb(27, 118, 253);"></i>
+          
+                        </div>
+                        <p>This project marks my second experience in web development, where I had to create a makeup
+                            e-commerce platform using STACK.
+                            Working on this project allowed me to develop foundational skills in both front-end and
+                            back-end development within a dynamic e-commerce setting</p>
                         <div class="project-button">
-                            <a href="https://github.com/MelvinVerLia/MakeMeUpz">Source Code</a>
+                            <a href="https://github.com/MelvinVerLia/MakeMeUpz" target="_blank">Source Code</a>
                             <a id="notAvailable">Demo</a>
                         </div>
                     </div>
@@ -155,20 +184,23 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="foot-content1">
-            <a href="https://github.com/MelvinVerLia">
-                <img src="Assets/github.png" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/melvin-verdinan-mulia-075729323/">
-                <img src="Assets/linkedin.png" alt="LinkedIn">
-            </a>
+    <section id="contact">
+        <div class="contact-section">
+            <h1>My Contact</h1>
+            <div class="contact-box">
+                <div class="contact-content1">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>Email</h2>
+
+                </div>
+                <div class="contact-content2">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <h2>Linkedin</h2>
+
+                </div>
+            </div>
         </div>
-        <div class="foot-content2">
-            <p>+6287877270458</p>
-            <p>verdinanmelvin@gmail.com</p>
-        </div>
-    </footer>
+    </section>
 </body>
 
 </html>
