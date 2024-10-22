@@ -6,6 +6,7 @@ const textElement = document.querySelector('.blink');
 const typingDuration = 2000; 
 const linkedin = document.querySelector(".contact-content2");
 const email = document.querySelector(".contact-content1");
+const github = document.querySelector(".contact-content3")
 
 email.addEventListener('click', function() {
   const email = 'verdinanmelvin@gmail.com'; 
@@ -24,6 +25,10 @@ hamburger.addEventListener('click', () => {
 
 linkedin.addEventListener('click', () => {
   window.open("https://www.linkedin.com/in/melvin-verdinan-mulia/", "_blank");
+})
+
+github.addEventListener('click', () => {
+  window.open("https://github.com/MelvinVerLia", "_blank");
 })
 
 button.addEventListener('click', () => {
